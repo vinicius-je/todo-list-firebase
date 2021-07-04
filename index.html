@@ -4,10 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
     <title>Document</title>
 </head>
 <body>
-    <input type="text" name="" id="todo">
-    <button>OK</button>
+    <div class="container">
+        <div class="input-container">
+            <input type="text" name="" id="todo">
+            <button onclick="saveTodo()">OK</button>
+        </div>
+        <div class="todoList">
+        </div>
+    </div>
+    
+
+    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase.js"></script>
+    <script src="./firebase.js"></script>
+    <script src="/todo.js"></script>
 </body>
 </html>
