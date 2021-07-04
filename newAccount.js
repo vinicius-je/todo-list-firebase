@@ -4,8 +4,8 @@ document.querySelector(".createAccountBtn")
 .addEventListener('click', createAccount)
 
 function createAccount(){
-    let email = document.getElementById("email").value;
-    let pwd = document.getElementById("pwd").value;
+    let email = document.getElementById("newEmail").value;
+    let pwd = document.getElementById("newPwd").value;
 
     auth.createUserWithEmailAndPassword(email, pwd)
         .then(user => { console.log(user )})

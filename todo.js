@@ -1,4 +1,4 @@
-
+// reference to user database
 let allTodos = "";
 
 addEventListener("DOMContentLoaded", getTodoList);
@@ -33,8 +33,8 @@ function generateID(){
     return Math.random().toString(36).substring(2);
 }
 
-// take the task just typed 
-docRef.onSnapshot(doc => {
-    allTodos = doc.data().todoList;
-    showTodoList(allTodos);
-})
+// // take the task just typed 
+// docRef.onSnapshot(doc => {
+//     allTodos = doc.data().todoList;
+//     showTodoList(allTodos);
+// })

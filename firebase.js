@@ -16,10 +16,11 @@ let auth = firebase.auth()
 // data base name from firebase
 const TODO = "todoList";
 
-let user = "dZXEhCrrDANmXsPErKDEb65RZKR2";
+let docRef;
 
-// reference to user database
-let docRef = db.collection(TODO).doc(user);
+auth.onAuthStateChanged(user => {
+    docRef =  db.collection(TODO).doc(user.uid);
+    getTodoList();
+})
 
-// let user = auth.onAuthStateChanged(user => {return user.uid})  
-// console.log(user)
+
