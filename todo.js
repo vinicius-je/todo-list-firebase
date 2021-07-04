@@ -1,23 +1,14 @@
-addEventListener("DOMContentLoaded", getTodoList);
 
 let allTodos = "";
 
-function createDataBase(){
-    let data = {
-        todoList: []
-    }
-
-    docRef.set(data)
-        .then(docRef => {console.log(docRef)})
-        .catch(err => console.log(err))
-}
+addEventListener("DOMContentLoaded", getTodoList);
 
 // add a new todo
 function saveTodo(){
     let todo = document.getElementById("todo").value;
 
     docRef.update({
-        todoList: firebase.firestore.FieldValue.arrayUnion({todo, status:"undone"})
+        todoList: firebase.firestore.FieldValue.arrayUnion({id: generateID(), todo, status:"undone"})
     })
 }
 
@@ -36,6 +27,10 @@ function getTodoList(){
             allTodos = doc.data().todoList;
             showTodoList(allTodos)
     })
+}
+
+function generateID(){
+    return Math.random().toString(36).substring(2);
 }
 
 // take the task just typed 
