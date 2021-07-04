@@ -17,10 +17,8 @@ let auth = firebase.auth()
 const TODO = "todoList";
 
 let docRef;
+let currentUser;
 
-auth.onAuthStateChanged(user => {
-    docRef =  db.collection(TODO).doc(user.uid);
-    getTodoList();
-})
+
 
 

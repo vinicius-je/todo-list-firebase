@@ -1,5 +1,3 @@
-let currentUser = ""
-
 document.querySelector(".createAccountBtn")
 .addEventListener('click', createAccount)
 
