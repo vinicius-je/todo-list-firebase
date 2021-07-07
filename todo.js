@@ -1,5 +1,7 @@
 // reference to user database
- 
+
+let docRef;
+let currentUser; 
 let allTodos = "";
 
 addEventListener("DOMContentLoaded", () => {
@@ -7,6 +9,7 @@ addEventListener("DOMContentLoaded", () => {
         if(user){ currentUser = user.uid }
         docRef = db.collection(TODO).doc(currentUser);
         getTodoList();
+        busca();
     })
 })
 
@@ -46,5 +49,11 @@ function generateID(){
     return Math.random().toString(36).substring(2);
 }
 
+function busca(){
+    docRef.get()
+    .then(doc => {
+        console.log(doc.data());
+    })
+}
 
 

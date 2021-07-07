@@ -16,8 +16,6 @@ let auth = firebase.auth()
 // data base name from firebase
 const TODO = "todoList";
 
-let docRef;
-let currentUser;
 
 
 
