@@ -4,24 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+    <title>Login</title>
 </head>
 <body>
-    <div class="container">
-        <div class="input-container">
-            <input type="text" name="" id="todo">
-            <button onclick="saveTodo()">OK</button>
+
+    <div class="login container">
+        <h1>Todo List</h1>
+        <div>
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" placeholder="email">
         </div>
-        <div class="todoList">
+        <div>
+            <label for="pwd">Password</label>
+            <input type="password" name="pwd" id="pwd" placeholder="password">
         </div>
+        <button class="loginBtn">Login</button>
     </div>
-    
-    <button onclick="logout()">Logout</button>
 
     <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase.js"></script>
     <script src="./firebase.js"></script>
-    <script src="/todo.js"></script>
-    <script src="./logout.js"></script>
+    <script src="./login.js"></script>
 </body>
 </html>

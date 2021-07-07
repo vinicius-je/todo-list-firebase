@@ -8,7 +8,7 @@ function login(){
     auth.signInWithEmailAndPassword(email, pwd)
         .then(user => {
             console.log("Usuário conectado")
-            window.location.href = "http://127.0.0.1:5500/index.html";
+            window.location.href = "http://127.0.0.1:5500/todo.html";
         })
         .catch(err => { console.log(err) })
 }

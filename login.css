@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.login{
+    width: 320px;
+    margin: 120px auto;
+    text-align: center;
+}
+
+.login h1{
+    margin-bottom: 20px;
+    font-family: 'Sriracha', cursive;
+    font-size: 35px;
+}
+
+.login div{
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+label{
+    font-size: 20px;
+    font-family: Helvetica, sans-serif;
+}
+
+input{
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 18px;
+}
+
+.loginBtn{
+    margin: 20px;
+    width: 120px;
+    font-size: 16px;
+    padding: 6px 0;
+}
