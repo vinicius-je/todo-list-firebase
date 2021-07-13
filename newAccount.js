@@ -1,5 +1,4 @@
-document.querySelector(".createAccountBtn")
-.addEventListener('click', createAccount)
+document.querySelector(".createAccountBtn").addEventListener('click', createAccount)
 
 function createAccount(){
     let email = document.getElementById("newEmail").value;
