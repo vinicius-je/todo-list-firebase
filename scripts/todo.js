@@ -5,6 +5,7 @@ let currentUser;
 let allTodos = "";
 
 addEventListener("DOMContentLoaded", loadTodoList);
+document.querySelector('.addBtn').addEventListener('click', saveTodo);
 
 // add a new todo on database
 function saveTodo(){
