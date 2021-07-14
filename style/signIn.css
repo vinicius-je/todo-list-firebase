@@ -12,12 +12,6 @@
     margin: auto;
 }
 
-.wrapper h1{
-    margin-bottom: 20px;
-    font-family: 'Sriracha', cursive;
-    font-size: 35px;
-}
-
 .wrapper div{
     text-align: left;
     margin-bottom: 10px;
@@ -25,7 +19,6 @@
 
 label{
     font-size: 20px;
-    font-family: Helvetica, sans-serif;
 }
 
 input{
@@ -48,7 +41,6 @@ a{
     text-decoration: none;
     color: black;
     font-size: 16px;
-    font-family: Helvetica, sans-serif;
 }
 
 a:hover{

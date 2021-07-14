@@ -4,20 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="./style/todo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
     <title>Todo List</title>
 </head>
 <body>
+    <nav>
+        <button class="signOutBtn" onclick="logout()">Sign out</button>
+    </nav>
     <div class="container">
+        <h1>Todo List</h1>
         <div class="input-container">
             <input type="text" name="" id="todo">
-            <button onclick="saveTodo()">OK</button>
+            <button class="addBtn" onclick="saveTodo()">OK</button>
         </div>
         <div class="todoList">
         </div>
     </div>
-    
-    <button onclick="logout()">Logout</button>
 
     <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase.js"></script>
     <script src="./scripts/firebase.js"></script>
