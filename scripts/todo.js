@@ -56,13 +56,6 @@ function loadTodoList(){
     })
 }
 
-// function busca(){
-//     docRef.get()
-//     .then(doc => {
-//         console.log(doc.data());
-//     })
-// }
-
 function deleteTask(id){
     let new_list = [];
     docRef.get().then(doc => {

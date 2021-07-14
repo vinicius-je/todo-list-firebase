@@ -1,4 +1,4 @@
-document.querySelector(".createAccountBtn").addEventListener('click', createAccount)
+document.querySelector(".signUpBtn").addEventListener('click', createAccount)
 
 function createAccount(){
     let email = document.getElementById("newEmail").value;
@@ -22,5 +22,6 @@ function createDataBase(uid){
 
     db.collection(TODO).doc(uid).set(data)
     .then(data => {console.log("Banco de dados criado")})
+    .then(()=> window.location.href = "http://127.0.0.1:5500/todo.html")
     .catch(err => console.log(err))
 }

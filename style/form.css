@@ -28,11 +28,11 @@ input{
     font-size: 18px;
 }
 
-.signInBtn{
+.signInBtn, .signUpBtn{
     margin: 20px;
 }
 
-.signInBtn:hover{
+.signInBtn:hover, .signUpBtn:hover{
     color: white;
 }
 
@@ -49,4 +49,9 @@ a:hover{
 
 span{
     color: #FF0303;
+}
+
+h3{
+    margin-bottom: 20px;
+    font-family: 'Sriracha', cursive;
 }
