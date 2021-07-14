@@ -10,6 +10,13 @@ nav{
 
 .signOutBtn:hover{ color: black; }
 
+.deleteAccount{
+    background-color: #292424;
+    color: white;
+}
+
+.deleteAccount:hover{ color: #F14C4C }
+
 .container{
     width: 400px;
     margin: auto;
