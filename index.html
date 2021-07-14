@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="./style/signIn.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
@@ -12,21 +13,24 @@
 </head>
 <body>
 
-    <div class="login container">
-        <h1>Todo List</h1>
-        <div>
-            <label for="email">Email</label>
-            <input type="text" name="email" id="email" placeholder="email">
+    <div class="container">
+        <div class="wrapper">
+            <h1>Todo List</h1>
+            <div>
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" placeholder="email">
+            </div>
+            <div>
+                <label for="pwd">Password</label>
+                <input type="password" name="pwd" id="pwd" placeholder="password">
+            </div>
         </div>
-        <div>
-            <label for="pwd">Password</label>
-            <input type="password" name="pwd" id="pwd" placeholder="password">
-        </div>
-        <button class="loginBtn">Login</button>
+        <button class="signInBtn">Sign in</button>
+        <a href="">Dont have an account? <span>Sign up</span></a>
     </div>
 
     <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase.js"></script>
-    <script src="./firebase.js"></script>
-    <script src="./login.js"></script>
+    <script src="./scripts/firebase.js"></script>
+    <script src="./scripts/signIn.js"></script>
 </body>
 </html>

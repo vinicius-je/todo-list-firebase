@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background-color: #E8E3E3;
+}
+
+button{
+    background-color: #5BF27C;
+    width: 120px;
+    padding: 10px 0;
+    border: none;
+    border-radius: 3px;
+    font-size: 18px;
+    cursor: pointer;
+}

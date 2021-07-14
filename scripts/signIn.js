@@ -1,7 +1,7 @@
 
-document.querySelector(".loginBtn").addEventListener("click", login);
+document.querySelector(".signInBtn").addEventListener("click", signIn);
 
-function login(){
+function signIn(){
     let email = document.getElementById("email").value;
     let pwd = document.getElementById("pwd").value;
 

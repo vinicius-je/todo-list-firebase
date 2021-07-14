@@ -1,0 +1,60 @@
+.container{
+    background-color: white;
+    width: 400px;
+    margin: 120px auto;
+    text-align: center;
+    padding: 40px 0;
+    border-radius: 5px;
+}
+
+.wrapper{
+    width: 320px;
+    margin: auto;
+}
+
+.wrapper h1{
+    margin-bottom: 20px;
+    font-family: 'Sriracha', cursive;
+    font-size: 35px;
+}
+
+.wrapper div{
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+label{
+    font-size: 20px;
+    font-family: Helvetica, sans-serif;
+}
+
+input{
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 18px;
+}
+
+.signInBtn{
+    margin: 20px;
+}
+
+.signInBtn:hover{
+    color: white;
+}
+
+a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-family: Helvetica, sans-serif;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+span{
+    color: #FF0303;
+}
