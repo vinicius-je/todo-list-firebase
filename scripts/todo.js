@@ -16,6 +16,7 @@ function saveTodo(){
         allTodos = doc.data().todoList;
         createTodoList(allTodos);
     })
+    todo.value = '';
 }
 
 function createTodoList(data){
