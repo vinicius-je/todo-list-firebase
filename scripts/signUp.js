@@ -6,7 +6,7 @@ function createAccount(){
 
     auth.createUserWithEmailAndPassword(email, pwd)
         .then(user => { console.log(user )})
-        .catch(err => console.log(err));
+        .catch(err => alert("missing email or password"));
 
     auth.onAuthStateChanged((user) => {
         if(user){

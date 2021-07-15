@@ -10,5 +10,5 @@ function signIn(){
             console.log("Usuário conectado")
             window.location.href = "http://127.0.0.1:5500/todo.html";
         })
-        .catch(err => { console.log(err) })
+        .catch(err => { alert("missing email or password") })
 }

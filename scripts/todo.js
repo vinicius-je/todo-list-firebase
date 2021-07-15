@@ -10,14 +10,16 @@ document.querySelector('.addBtn').addEventListener('click', saveTodo);
 // add a new todo on database
 function saveTodo(){
     let todo = document.getElementById("todo").value;
-    docRef.update({
-        todoList: firebase.firestore.FieldValue.arrayUnion({id: generateID(), todo, status:"undone"})
-    })
-    docRef.onSnapshot(doc => {
-        allTodos = doc.data().todoList;
-        createTodoList(allTodos);
-    })
-    todo.value = '';
+    if(todo != ''){
+        docRef.update({
+            todoList: firebase.firestore.FieldValue.arrayUnion({id: generateID(), todo, status:"undone"})
+        })
+        docRef.onSnapshot(doc => {
+            allTodos = doc.data().todoList;
+            createTodoList(allTodos);
+        })
+    }else{ alert("Try again") }
+    document.getElementById("todo").value = '';
 }
 
 function createTodoList(data){
