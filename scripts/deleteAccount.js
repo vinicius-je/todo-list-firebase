@@ -1,4 +1,6 @@
+document.querySelector('.deleteBtn').addEventListener('click', confirmDeleteAccount);
 document.querySelector('.deleteAccount').addEventListener('click', deleteAccount);
+document.querySelector('.closeBoxBtn').addEventListener('click', closeBox);
 
 function deleteAccount(){
     let user = auth.currentUser
@@ -9,3 +11,6 @@ function deleteAccount(){
 
     docRef.delete();
 }
+
+function confirmDeleteAccount(){ document.querySelector('.deleteBox').style.display="block"; }
+function closeBox(){ document.querySelector('.deleteBox').style.display="none"; }
