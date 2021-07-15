@@ -61,3 +61,8 @@ i{
 }
 
 i:hover{ color: #5BF27C; }
+
+        @media screen and (max-width: 500px){
+            .container{ width: 330px; }
+            nav{ text-align: center; }
+        }
