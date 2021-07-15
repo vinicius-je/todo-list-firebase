@@ -7,7 +7,7 @@ function deleteAccount(){
     
     docRef.delete();
     user.delete().then(() => {
-        window.location.href = "http://127.0.0.1:5500/todo.html";
+        window.location.href = "https://vinicius-je.github.io/todo-list-firebase/";
     }).catch(err => console.log(err))
 }
 

@@ -22,6 +22,6 @@ function createDataBase(uid){
 
     db.collection(TODO).doc(uid).set(data)
     .then(data => {console.log("Banco de dados criado")})
-    .then(()=> window.location.href = "http://127.0.0.1:5500/todo.html")
+    .then(()=> window.location.href = "https://vinicius-je.github.io/todo-list-firebase/todo.html")
     .catch(err => console.log(err))
 }
