@@ -1,5 +1,4 @@
 // reference to user database
-
 let docRef;
 let currentUser; 
 let allTodos = "";

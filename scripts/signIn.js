@@ -8,7 +8,7 @@ function signIn(){
     auth.signInWithEmailAndPassword(email, pwd)
         .then(user => {
             console.log("Usuário conectado")
-            window.location.href = "https://vinicius-je.github.io/todo-list-firebase/todo";
+            window.location.replace("https://vinicius-je.github.io/todo-list-firebase/todo");
         })
         .catch(err => { alert("missing email or password") })
 }
