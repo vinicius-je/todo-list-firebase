@@ -1,25 +1,56 @@
 nav{
-    padding: 20px;
-    text-align: right;
+    position: absolute;
+    right: 20px;
+    padding: 10px 20px 0 20px;
+    width: 140px;
+    margin-left: auto;
 }
 
-.signOutBtn, .closeBoxBtn{
-    background-color: #F14C4C;
-    color: white;
+.display{
+    display: none;
 }
 
-.signOutBtn:hover, .closeBoxBtn:hover{ color: black; }
-
-.deleteAccount, .deleteBtn{
-    background-color: #292424;
-    color: white;
+.rotate{
+    transform: rotate(-180deg);
 }
 
-.deleteAccount:hover, .deleteBtn:hover{ color: #F14C4C }
+.dropDown-btn{
+    width: 25px;
+    height: 25px;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.dropDown-btn i{
+    color: #121212;
+    font-size: 1.25rem;
+}
+
+.dropDown{
+    background-color: white;
+    box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.dropDown div{
+    width: 100px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropDown div:hover{
+    background-color: #d4d1d1;
+}
 
 .container{
     width: 400px;
     margin: auto;
+    padding-top: 60px;
 }
 
 .input-container{
@@ -63,12 +94,12 @@ input{
     word-wrap: break-word;
 }
 
-i{
+.task_container i{
     font-size: 20px;
     color: #bebebe;
 }
 
-i:hover{ color: #5BF27C; }
+.task_container i:hover{ color: #5BF27C; }
 
 .deleteBox{
     height: 100vh;
