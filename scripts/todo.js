@@ -33,26 +33,8 @@ function createTodoList(data){
                                 <i class="fas fa-check-circle" onClick="completedTask(this)"></i>
                             </div>
                         </div>`;
-
-        
-        // antes
-        // `<li id=${data[index].id} class=${data[index].status ? "line-through" : "" }>
-        // ${data[index].todo}
-        // <div>
-        //     <i class="fas fa-trash" onClick="deleteTask(this)"></i>
-        //     <i class="fas fa-check-circle"></i>
-        // </div>
-        // </li>`
     }
     document.querySelector(".todoList").innerHTML = htmlElements;
-
-    // let icon = document.querySelectorAll('.fas');
-    // icon.forEach(element => {
-    //     element.addEventListener('click', (e) => {
-    //         let id = e.target.parentElement.id;
-    //         deleteTask(id);
-    //     })
-    // })
 }
 
 function completedTask(element){
