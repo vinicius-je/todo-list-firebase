@@ -11,7 +11,7 @@ function saveTodo(){
     let todo = document.getElementById("todo").value;
     if(todo != ''){
         docRef.update({
-            todoList: firebase.firestore.FieldValue.arrayUnion({id: generateID(), todo, status:"undone"})
+            todoList: firebase.firestore.FieldValue.arrayUnion({id: generateID(), todo, completed: false})
         })
         docRef.onSnapshot(doc => {
             allTodos = doc.data().todoList;
@@ -24,16 +24,44 @@ function saveTodo(){
 function createTodoList(data){
     let htmlElements = ""
     for(let index in data){
-        htmlElements += `<li id=${data[index].id}>${data[index].todo} <i class="fas fa-check-circle"></i></li>`;
+        htmlElements += `<div id=${data[index].id} class="task_container">
+                            <span class=${data[index].completed ? "line-through" : "" }>
+                                ${data[index].todo}
+                            </span>
+                            <div>
+                                <i class="fas fa-trash" onClick="deleteTask(this)"></i>
+                                <i class="fas fa-check-circle" onClick="completedTask(this)"></i>
+                            </div>
+                        </div>`;
+
+        
+        // antes
+        // `<li id=${data[index].id} class=${data[index].status ? "line-through" : "" }>
+        // ${data[index].todo}
+        // <div>
+        //     <i class="fas fa-trash" onClick="deleteTask(this)"></i>
+        //     <i class="fas fa-check-circle"></i>
+        // </div>
+        // </li>`
     }
     document.querySelector(".todoList").innerHTML = htmlElements;
 
-    let icon = document.querySelectorAll('.fas');
-    icon.forEach(element => {
-        element.addEventListener('click', (e) => {
-            let id = e.target.parentElement.id;
-            deleteTask(id);
-        })
+    // let icon = document.querySelectorAll('.fas');
+    // icon.forEach(element => {
+    //     element.addEventListener('click', (e) => {
+    //         let id = e.target.parentElement.id;
+    //         deleteTask(id);
+    //     })
+    // })
+}
+
+function completedTask(element){
+    let id = element.parentElement.parentElement.id
+    allTodos.forEach(task => {
+        if(task.id === id){
+            task.completed = !task.completed
+            docRef.set({todoList: allTodos}).then(() => loadTodoList())
+        }
     })
 }
 
@@ -59,18 +87,19 @@ function loadTodoList(){
     })
 }
 
-function deleteTask(id){
+function deleteTask(element){
+    let id = element.parentElement.parentElement.id
+    
     let new_list = [];
     docRef.get().then(doc => {
         let old_list = doc.data().todoList;
-        let validate = false;
+        let delete_task = false;
         old_list.forEach(task => {
             if(task.id != id){ new_list.push(task) }
-            else{ validate = true; }
+            else{ delete_task = true; }
         })
-        if(validate){ 
-            docRef.set({todoList: new_list});
-            loadTodoList();
+        if(delete_task){ 
+            docRef.set({todoList: new_list}).then(() => loadTodoList())
         }
     })
 }

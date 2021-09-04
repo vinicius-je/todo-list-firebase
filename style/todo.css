@@ -46,7 +46,7 @@ input{
 }
 .addBtn:hover{ color: white }
 
-li{
+.task_container{
     display: flex;
     justify-content: space-between;
     padding: 10px;
@@ -82,6 +82,10 @@ i:hover{ color: #5BF27C; }
 
 .box h1{
     font-size: 25px;
+}
+
+.line-through{
+    text-decoration: line-through;
 }
 
         @media screen and (max-width: 500px){
