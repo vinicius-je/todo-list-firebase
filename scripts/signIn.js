@@ -16,6 +16,6 @@ function signIn(){
 auth.signInWithEmailAndPassword('text@email.com', 'abc123')
         .then(user => {
             console.log("Usuário conectado")
-            // window.location.replace("https://vinicius-je.github.io/todo-list-firebase/todo");
+            window.location.replace("https://vinicius-je.github.io/todo-list-firebase/todo");
         })
         .catch(err => { alert("missing email or password") })
